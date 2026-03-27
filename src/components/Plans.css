@@ -1,0 +1,104 @@
+.plans {
+  background-color: var(--color-dark);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.subtitle {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.plan-card {
+  padding: 60px 40px;
+  text-align: center;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card.featured {
+  background: rgba(212, 175, 55, 0.05);
+  border-color: var(--color-accent);
+}
+
+.plan-name {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.plan-desc {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-bottom: 40px;
+}
+
+.plan-price {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.plan-list {
+  text-align: left;
+  list-style: none;
+  margin-bottom: 50px;
+  flex-grow: 1;
+}
+
+.plan-list li {
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.plan-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.btn-plan {
+  background: white;
+  color: black;
+  border: none;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-plan:hover {
+  background: var(--color-accent);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 1024px) {
+  .plans-grid { grid-template-columns: 1fr; gap: 50px; }
+  .title { font-size: 2.5rem; }
+}

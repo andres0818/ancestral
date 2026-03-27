@@ -1,0 +1,120 @@
+.gallery {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.gallery .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+.gallery-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.gallery-title {
+  font-size: 3.5rem;
+  letter-spacing: 8px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.gallery-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-dot {
+  width: 60px;
+  height: 3px;
+  background-color: rgba(255,255,255,0.1);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.nav-dot.active {
+  background-color: var(--color-accent);
+  width: 100px;
+}
+
+.gallery-viewport {
+  width: 100%;
+  height: 55vh; /* Altura controlada para que quepa todo en una pantalla */
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.gallery-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 50px;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  text-align: left;
+}
+
+.info-cat {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.info-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-top: 10px;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .gallery-title { font-size: 2rem; }
+  .info-title { font-size: 1.8rem; }
+  .gallery-viewport { height: 45vh; }
+  .nav-dot { width: 30px; }
+}
+
+@media (max-width: 768px) {
+  .gallery-header { margin-bottom: 20px; }
+  .gallery-viewport { height: 40vh; border-radius: 20px; }
+}
+
+@media (max-width: 768px) {
+  .gallery-title { font-size: 1.5rem; }
+  .info-title { font-size: 2rem; }
+  .gallery-viewport { aspect-ratio: 4/5; }
+}

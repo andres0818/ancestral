@@ -1,0 +1,224 @@
+.footer-full-cinematic {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.footer-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.footer-bg-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) brightness(0.4);
+}
+
+/* Film Grain Effect */
+.footer-grain-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  opacity: 0.08;
+  pointer-events: none;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Grain.jpg');
+  background-repeat: repeat;
+  animation: grain 0.5s steps(1) infinite;
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(-15%, 5%); }
+  30% { transform: translate(7%, -25%); }
+  40% { transform: translate(-5%, 25%); }
+  50% { transform: translate(-15%, 10%); }
+  60% { transform: translate(15%, 0%); }
+  70% { transform: translate(0%, 15%); }
+  80% { transform: translate(3%, 35%); }
+  90% { transform: translate(-10%, 10%); }
+}
+
+.footer-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
+  z-index: 2;
+}
+
+.footer-content-full {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.footer-text-block {
+  max-width: 1400px;
+  width: 100%;
+}
+
+.footer-subtitle-gold {
+  color: #ffb800; /* Pure gold */
+  letter-spacing: 12px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  display: block;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.footer-title-huge {
+  font-size: clamp(3rem, 10vw, 9rem);
+  font-weight: 900;
+  line-height: 0.8;
+  margin-bottom: 50px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  /* Neon Gold Glow */
+  text-shadow: 0 0 10px rgba(255, 184, 0, 0.3),
+               0 0 20px rgba(255, 184, 0, 0.2);
+  position: relative;
+  animation: glitch-glow 3s infinite alternate;
+}
+
+@keyframes glitch-glow {
+  0%, 100% { 
+    text-shadow: 0 0 10px rgba(255, 184, 0, 0.3), 0 0 20px rgba(255, 184, 0, 0.2);
+    transform: skew(0deg);
+  }
+  92% {
+    text-shadow: 0 0 10px rgba(255, 184, 0, 0.3), 0 0 20px rgba(255, 184, 0, 0.2);
+    transform: skew(0deg);
+  }
+  94% {
+    text-shadow: 2px 0 red, -2px 0 cyan;
+    transform: skew(2deg);
+  }
+  96% {
+    text-shadow: -2px 0 red, 2px 0 cyan;
+    transform: skew(-2deg);
+  }
+  98% {
+    text-shadow: 0 0 30px rgba(255, 184, 0, 0.6);
+    transform: skew(0deg);
+  }
+}
+
+/* Glitch Effect on Title */
+.glitch-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-description-wide {
+  font-size: 1.8rem;
+  font-weight: 300;
+  opacity: 0.7;
+  margin-bottom: 70px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.footer-cta-group-wide {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Rockstar Style Buttons (Solid Blocks) */
+.btn-rockstar {
+  position: relative;
+  padding: 25px 60px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease; /* Snappy transition like GTA */
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-rockstar-primary {
+  background-color: white;
+  color: black;
+}
+
+.btn-rockstar-primary:hover {
+  background-color: #ffb800;
+  color: black;
+  transform: scale(1.05);
+}
+
+.btn-rockstar-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.btn-rockstar-secondary:hover {
+  background-color: white;
+  color: black;
+}
+
+.footer-sub-bottom {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  z-index: 6;
+}
+
+.footer-sub-bottom p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .footer-title-huge {
+    font-size: 4rem;
+  }
+  .footer-description-wide {
+    font-size: 1.2rem;
+  }
+  .btn-rockstar {
+    padding: 20px 40px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,214 @@
+.about-minimalist {
+  background-color: var(--color-dark);
+  padding: 150px 0;
+  text-align: center;
+}
+
+.about-text-center {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title-large {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-top: 20px;
+  line-height: 1.1;
+  color: white;
+}
+
+.divider-gold {
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-accent);
+  margin: 40px auto;
+}
+
+.description-premium {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .title-large { font-size: 3rem; }
+  .description-premium { font-size: 1.2rem; }
+}
+
+.gastronomy-section-v3 {
+  height: 100vh;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: var(--color-dark);
+  overflow: hidden;
+}
+
+.gastro-flex-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: stretch;
+}
+
+.gastro-panel-v3 {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: flex 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.gastro-panel-v3:hover {
+  flex: 2;
+}
+
+.gastro-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.gastro-panel-v3:hover .gastro-bg-image {
+  transform: scale(1.1);
+}
+
+.gastro-overlay-v3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 20%, rgba(0,0,0,0.85) 100%);
+  z-index: 2;
+}
+
+.gastro-content-v3 {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  width: 100%;
+  padding: 0 40px;
+  z-index: 3;
+  text-align: center;
+  pointer-events: none;
+}
+
+.gastro-num {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: 15px;
+  letter-spacing: 5px;
+}
+
+.gastro-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: 2px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.gastro-desc {
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  opacity: 0.7;
+  margin-top: 15px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.gastro-panel-v3.featured-panel {
+  flex: 1.2;
+}
+
+.gastro-details {
+  margin-top: 20px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gastro-panel-v3:hover .gastro-details {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gastro-details p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  color: rgba(255,255,255,0.8);
+}
+
+.btn-gastro-mini {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-gastro-mini:hover {
+  background: white;
+  color: black;
+  border-color: white;
+}
+
+@media (max-width: 992px) {
+  .gastro-details { opacity: 1; transform: none; margin-top: 15px; }
+  .gastro-panel-v3.featured-panel { flex: 1; }
+}
+
+/* Footer styles moved to components/Footer.css */
+
+.whatsapp-float-premium {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  z-index: 1000;
+  transition: var(--transition-smooth);
+}
+
+.whatsapp-float-premium:hover {
+  transform: scale(1.1);
+  background-color: var(--color-accent);
+  color: black;
+}
+
+@media (max-width: 992px) {
+  .grid-2 { grid-template-columns: 1fr; gap: 50px; }
+  .about-text h2 { font-size: 2.5rem; }
+  .footer-grid { flex-direction: column; gap: 40px; }
+}
