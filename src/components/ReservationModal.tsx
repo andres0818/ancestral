@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, FC, FormEvent } from 'react';
+import { useState, useRef, useEffect, type FC, type FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import './ReservationModal.css';
