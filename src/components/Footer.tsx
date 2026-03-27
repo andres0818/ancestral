@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { motion } from 'framer-motion';
 import './Footer.css';
 
@@ -6,7 +6,7 @@ interface FooterProps {
   onReserve: () => void;
 }
 
-const Footer: React.FC<FooterProps> = ({ onReserve }) => {
+const Footer: FC<FooterProps> = ({ onReserve }) => {
   return (
     <footer className="footer-full-cinematic">
       {/* Background with Ken Burns Effect */}

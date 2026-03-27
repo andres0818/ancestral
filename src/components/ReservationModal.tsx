@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, FC, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import './ReservationModal.css';
@@ -9,7 +9,7 @@ interface ReservationModalProps {
   initialPlan?: string;
 }
 
-const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onClose, initialPlan = '' }) => {
+const ReservationModal: FC<ReservationModalProps> = ({ isOpen, onClose, initialPlan = '' }) => {
   const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -48,7 +48,7 @@ const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onClose, in
     return newErrors.length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!form.current) return;
 

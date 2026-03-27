@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { motion } from 'framer-motion';
 import './Plans.css';
 
@@ -27,7 +27,7 @@ interface PlansProps {
   onSelectPlan: (planName: string) => void;
 }
 
-const Plans: React.FC<PlansProps> = ({ onSelectPlan }) => {
+const Plans: FC<PlansProps> = ({ onSelectPlan }) => {
   return (
     <section id="plans" className="plans">
       <div className="container">

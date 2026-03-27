@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, FC } from 'react';
 import './Header.css';
 
 interface HeaderProps {
   onReserve: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onReserve }) => {
+const Header: FC<HeaderProps> = ({ onReserve }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {

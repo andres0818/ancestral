@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { motion } from 'framer-motion';
 import './Hero.css';
 
@@ -6,7 +6,7 @@ interface HeroProps {
   onReserve: () => void;
 }
 
-const Hero: React.FC<HeroProps> = ({ onReserve }) => {
+const Hero: FC<HeroProps> = ({ onReserve }) => {
   return (
     <section id="hero" className="hero">
       <div className="hero-bg-wrapper">
